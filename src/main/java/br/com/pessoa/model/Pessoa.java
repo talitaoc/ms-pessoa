@@ -33,6 +33,6 @@ public class Pessoa {
 	private String password;
 	
 	@CreatedDate
-	private LocalDateTime dataRegistro;
+	private LocalDateTime createdAt;
 	
 }

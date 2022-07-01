@@ -10,6 +10,8 @@ import br.com.pessoa.model.Pessoa;
 import br.com.pessoa.service.PessoaService;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/pessoa")
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class PessoaController {
 	@GetMapping("/pessoa/{id}")
 	public ResponseEntity<Pessoa> getOne(@PathVariable Long id){
 		
-		return findById(id);
+		return ResponseEntity.of(pessoaService.findById(id));
 	}
 
 
